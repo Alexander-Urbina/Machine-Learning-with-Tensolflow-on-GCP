@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 import base64
 
 APIKEY="REPLACE-API-KEY"  # Replace with your API key
-IMAGE="path to you image"
+IMAGE="path to image"
 vservice = build('vision', 'v1', developerKey=APIKEY)
 request = vservice.images().annotate(body={
         'requests': [{
