@@ -1,7 +1,8 @@
-APIKEY="REPLACE-API-KEY"  # Replace with your API key
-
 # Running the Vision API
+from googleapiclient.discovery import build
 import base64
+
+APIKEY="REPLACE-API-KEY"  # Replace with your API key
 IMAGE="path to you image"
 vservice = build('vision', 'v1', developerKey=APIKEY)
 request = vservice.images().annotate(body={
